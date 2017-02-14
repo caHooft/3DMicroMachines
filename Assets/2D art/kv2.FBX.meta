@@ -1,0 +1,357 @@
+fileFormatVersion: 2
+guid: 3748ae839ae71a2489294ba380adf7c9
+timeCreated: 1485899595
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ' 1'
+    100002: 001
+    100004: axis-bumps
+    100006: carrier_wheel_left006
+    100008: carrier_wheel_left011
+    100010: carrier_wheel_left014
+    100012: carrier_wheel_left015
+    100014: carrier_wheel_left016
+    100016: carrier_wheel_left02
+    100018: Cone002
+    100020: Cone01
+    100022: Cylinder063
+    100024: Cylinder065
+    100026: drive left
+    100028: drive right
+    100030: front m-gun
+    100032: grille
+    100034: //RootNode
+    100036: kvtrak_125
+    100038: kvtrak_125_MeshPart0
+    100040: kvtrak_125_MeshPart1
+    100042: kvtrak_125_MeshPart2
+    100044: kvtrak_125_MeshPart3
+    100046: kvtrak_125_MeshPart4
+    100048: kvtrak_125_MeshPart5
+    100050: Line005
+    100052: Line01
+    100054: Object017
+    100056: Object018
+    100058: Object029
+    100060: Object030
+    100062: Object038
+    100064: Object043
+    100066: Object047
+    100068: Object048
+    100070: Sphere001
+    100072: support_wheel_left006
+    100074: support_wheel_left007
+    100076: support_wheel_left008
+    100078: support_wheel_left009
+    100080: support_wheel_left010
+    100082: support_wheel_left011
+    100084: support_wheel_right006
+    100086: support_wheel_right007
+    100088: support_wheel_right008
+    100090: support_wheel_right009
+    100092: support_wheel_right010
+    100094: support_wheel_right011
+    100096: sway-beam_001
+    100098: sway-beam_002
+    100100: sway-beam_003
+    100102: sway-beam_004
+    100104: sway-beam_005
+    100106: sway-beam_006
+    100108: sway-beam_007
+    100110: sway-beam_008
+    100112: sway-beam_009
+    100114: sway-beam_010
+    100116: sway-beam_011
+    100118: sway-beam_012
+    400000: ' 1'
+    400002: 001
+    400004: axis-bumps
+    400006: carrier_wheel_left006
+    400008: carrier_wheel_left011
+    400010: carrier_wheel_left014
+    400012: carrier_wheel_left015
+    400014: carrier_wheel_left016
+    400016: carrier_wheel_left02
+    400018: Cone002
+    400020: Cone01
+    400022: Cylinder063
+    400024: Cylinder065
+    400026: drive left
+    400028: drive right
+    400030: front m-gun
+    400032: grille
+    400034: //RootNode
+    400036: kvtrak_125
+    400038: kvtrak_125_MeshPart0
+    400040: kvtrak_125_MeshPart1
+    400042: kvtrak_125_MeshPart2
+    400044: kvtrak_125_MeshPart3
+    400046: kvtrak_125_MeshPart4
+    400048: kvtrak_125_MeshPart5
+    400050: Line005
+    400052: Line01
+    400054: Object017
+    400056: Object018
+    400058: Object029
+    400060: Object030
+    400062: Object038
+    400064: Object043
+    400066: Object047
+    400068: Object048
+    400070: Sphere001
+    400072: support_wheel_left006
+    400074: support_wheel_left007
+    400076: support_wheel_left008
+    400078: support_wheel_left009
+    400080: support_wheel_left010
+    400082: support_wheel_left011
+    400084: support_wheel_right006
+    400086: support_wheel_right007
+    400088: support_wheel_right008
+    400090: support_wheel_right009
+    400092: support_wheel_right010
+    400094: support_wheel_right011
+    400096: sway-beam_001
+    400098: sway-beam_002
+    400100: sway-beam_003
+    400102: sway-beam_004
+    400104: sway-beam_005
+    400106: sway-beam_006
+    400108: sway-beam_007
+    400110: sway-beam_008
+    400112: sway-beam_009
+    400114: sway-beam_010
+    400116: sway-beam_011
+    400118: sway-beam_012
+    2300000: axis-bumps
+    2300002: carrier_wheel_left006
+    2300004: carrier_wheel_left011
+    2300006: carrier_wheel_left014
+    2300008: carrier_wheel_left015
+    2300010: carrier_wheel_left016
+    2300012: carrier_wheel_left02
+    2300014: Cylinder063
+    2300016: Cylinder065
+    2300018: drive left
+    2300020: drive right
+    2300022: front m-gun
+    2300024: grille
+    2300026: kvtrak_125_MeshPart0
+    2300028: kvtrak_125_MeshPart1
+    2300030: kvtrak_125_MeshPart2
+    2300032: kvtrak_125_MeshPart3
+    2300034: kvtrak_125_MeshPart4
+    2300036: kvtrak_125_MeshPart5
+    2300038: Line005
+    2300040: Line01
+    2300042: Object017
+    2300044: Object018
+    2300046: Object029
+    2300048: Object030
+    2300050: Object038
+    2300052: Object043
+    2300054: Object047
+    2300056: Object048
+    2300058: Sphere001
+    2300060: support_wheel_left006
+    2300062: support_wheel_left007
+    2300064: support_wheel_left008
+    2300066: support_wheel_left009
+    2300068: support_wheel_left010
+    2300070: support_wheel_left011
+    2300072: support_wheel_right006
+    2300074: support_wheel_right007
+    2300076: support_wheel_right008
+    2300078: support_wheel_right009
+    2300080: support_wheel_right010
+    2300082: support_wheel_right011
+    2300084: sway-beam_001
+    2300086: sway-beam_002
+    2300088: sway-beam_003
+    2300090: sway-beam_004
+    2300092: sway-beam_005
+    2300094: sway-beam_006
+    2300096: sway-beam_007
+    2300098: sway-beam_008
+    2300100: sway-beam_009
+    2300102: sway-beam_010
+    2300104: sway-beam_011
+    2300106: sway-beam_012
+    3300000: axis-bumps
+    3300002: carrier_wheel_left006
+    3300004: carrier_wheel_left011
+    3300006: carrier_wheel_left014
+    3300008: carrier_wheel_left015
+    3300010: carrier_wheel_left016
+    3300012: carrier_wheel_left02
+    3300014: Cylinder063
+    3300016: Cylinder065
+    3300018: drive left
+    3300020: drive right
+    3300022: front m-gun
+    3300024: grille
+    3300026: kvtrak_125_MeshPart0
+    3300028: kvtrak_125_MeshPart1
+    3300030: kvtrak_125_MeshPart2
+    3300032: kvtrak_125_MeshPart3
+    3300034: kvtrak_125_MeshPart4
+    3300036: kvtrak_125_MeshPart5
+    3300038: Line005
+    3300040: Line01
+    3300042: Object017
+    3300044: Object018
+    3300046: Object029
+    3300048: Object030
+    3300050: Object038
+    3300052: Object043
+    3300054: Object047
+    3300056: Object048
+    3300058: Sphere001
+    3300060: support_wheel_left006
+    3300062: support_wheel_left007
+    3300064: support_wheel_left008
+    3300066: support_wheel_left009
+    3300068: support_wheel_left010
+    3300070: support_wheel_left011
+    3300072: support_wheel_right006
+    3300074: support_wheel_right007
+    3300076: support_wheel_right008
+    3300078: support_wheel_right009
+    3300080: support_wheel_right010
+    3300082: support_wheel_right011
+    3300084: sway-beam_001
+    3300086: sway-beam_002
+    3300088: sway-beam_003
+    3300090: sway-beam_004
+    3300092: sway-beam_005
+    3300094: sway-beam_006
+    3300096: sway-beam_007
+    3300098: sway-beam_008
+    3300100: sway-beam_009
+    3300102: sway-beam_010
+    3300104: sway-beam_011
+    3300106: sway-beam_012
+    4300000: Line01
+    4300002: Sphere001
+    4300004: grille
+    4300006: Line005
+    4300008: Object017
+    4300010: Object018
+    4300012: drive left
+    4300014: drive right
+    4300016: axis-bumps
+    4300018: support_wheel_left006
+    4300020: support_wheel_left007
+    4300022: support_wheel_left008
+    4300024: support_wheel_left009
+    4300026: support_wheel_left010
+    4300028: support_wheel_left011
+    4300030: support_wheel_right006
+    4300032: support_wheel_right007
+    4300034: support_wheel_right008
+    4300036: support_wheel_right009
+    4300038: support_wheel_right010
+    4300040: support_wheel_right011
+    4300042: carrier_wheel_left02
+    4300044: carrier_wheel_left006
+    4300046: carrier_wheel_left011
+    4300048: carrier_wheel_left014
+    4300050: carrier_wheel_left015
+    4300052: carrier_wheel_left016
+    4300054: Object029
+    4300056: Object030
+    4300058: front m-gun
+    4300060: Cylinder063
+    4300062: Object038
+    4300064: Object043
+    4300066: Cylinder065
+    4300068: Object047
+    4300070: Object048
+    4300072: kvtrak_125_MeshPart0
+    4300074: kvtrak_125_MeshPart1
+    4300076: kvtrak_125_MeshPart2
+    4300078: kvtrak_125_MeshPart3
+    4300080: kvtrak_125_MeshPart4
+    4300082: kvtrak_125_MeshPart5
+    4300084: sway-beam_009
+    4300086: sway-beam_012
+    4300088: sway-beam_011
+    4300090: sway-beam_010
+    4300092: sway-beam_008
+    4300094: sway-beam_007
+    4300096: sway-beam_006
+    4300098: sway-beam_005
+    4300100: sway-beam_004
+    4300102: sway-beam_003
+    4300104: sway-beam_002
+    4300106: sway-beam_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
