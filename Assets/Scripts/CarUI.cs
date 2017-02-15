@@ -9,11 +9,17 @@ public class CarUI : MonoBehaviour
     public Text lapCountText;
     public Text positionText;
     private bool finished;
+    //private ShowPanels showPanels;
+    private StartOptions startScript;
     private float startTimer = 0.01f;
 
     public int lapCount;
 
-
+    public void Awake()
+    {
+        //showPanels = GameObject.Find("UIMicroMachines").GetComponent<ShowPanels>();
+        startScript = GameObject.Find("UIMicroMachines").GetComponent<StartOptions>();
+    }
 
     public void Update()
     {
@@ -63,14 +69,16 @@ public class CarUI : MonoBehaviour
         if (lapCount >= 3)
         {
             Finish();
-            lapCountText.text = ("Bonus Lap" + (lapCount - 2));
+            //lapCountText.text = ("Bonus Lap" + (lapCount - 2));
         }
     }
 
     public void Finish()
     {
         //sets the text color of timerText to green
-        timeText.color = Color.green;
+        //showPanels.ShowEndGamePanel();
+        startScript.EndGameScreen();
+        
         finished = true;
     }
 }

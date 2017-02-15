@@ -60,7 +60,7 @@ public class CarMovement : MonoBehaviour
     public void FixedUpdate()
     {
         //downforce for the car (spoiler)
-        rigidbodyCar.AddForce(0, -50000, 0);
+        rigidbodyCar.AddForce(0, -75000, 0);
 
         //Creates a new float that gets the input of the vertical axis (Either 1, 0 or -1) and multiplies it by the maxMotorTorque variable.
         float motor = Input.GetAxis("Vertical"+ playernumber) * maxMotorTorque;

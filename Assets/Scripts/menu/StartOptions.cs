@@ -37,6 +37,8 @@ public class StartOptions : MonoBehaviour
 
 	public void StartButtonClicked()
 	{
+        //selects single player scene
+        sceneToStart = 1;
         Cursor.visible = false;
         //If changeMusicOnStart is true, fade out volume of music
         if (changeMusicOnStart) 
@@ -52,9 +54,11 @@ public class StartOptions : MonoBehaviour
 
 			//Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
 			animColorFade.SetTrigger ("fade");
-		} 
+		}
+        showPanels.HideEndGamePanel();
+        pause.UnPause();
 
-	}
+    }
 
     public void StartButtonClickedTwoPlayers()
     {
@@ -76,6 +80,8 @@ public class StartOptions : MonoBehaviour
             //Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
             animColorFade.SetTrigger("fade");
         }
+        showPanels.HideEndGamePanel();
+        pause.UnPause();
 
     }
     public void RetryButtonClicked()
@@ -103,7 +109,46 @@ public class StartOptions : MonoBehaviour
             //Call the StartGameInScene function to start game without loading a new scene.
             StartGameInScene();
         }
+
         pause.UnPause();
+    }
+
+    public void RestartButton()
+    {
+        Cursor.visible = false;
+        //If changeMusicOnStart is true, fade out volume of music
+        if (changeMusicOnStart)
+        {
+            playMusic.FadeDown(fadeColorAnimationClip.length);
+        }
+
+        //If true start fade and switch scenes halfway
+        if (changeScenes)
+        {
+            //Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
+            Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
+
+            //Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
+            animColorFade.SetTrigger("fade");
+        }
+
+        //If changeScenes is false, call StartGameInScene
+        else
+        {
+            //Call the StartGameInScene function to start game without loading a new scene.
+            StartGameInScene();
+        }
+        showPanels.HideEndGamePanel();
+        pause.UnPause();
+    }
+    public void EndGameScreen()
+    {
+        Cursor.visible = true;
+        pause.DoPause();
+
+        showPanels.ShowEndGamePanel();
+        Time.timeScale = 0;
+
     }
 
     //Once the level has loaded, check if we want Music
