@@ -94,6 +94,9 @@
     <Compile Include="Assets\Scripts\menu\StartOptions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\2D art\indoor skyboxes\DallasW\readme.txt" />
+    <None Include="Assets\2D art\indoor skyboxes\MarriottMadisonWest\readme.txt" />
+    <None Include="Assets\2D art\indoor skyboxes\Vasa\readme.txt" />
     <None Include="Assets\Fonts\OpenSans\License!.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
