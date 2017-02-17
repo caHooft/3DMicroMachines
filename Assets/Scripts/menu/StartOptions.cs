@@ -22,6 +22,15 @@ public class StartOptions : MonoBehaviour
     [HideInInspector]public Animator animMenuAlpha;
     [HideInInspector]public AnimationClip fadeAlphaAnimationClip;       //Reference to ShowPanels script
 
+    private static StartOptions startOptions;
+    public static StartOptions Instance
+    {
+        get
+        {
+            if (!startOptions) startOptions = FindObjectOfType<StartOptions>();
+            return startOptions;
+        }
+    }
 
     void Awake()
 	{
@@ -141,8 +150,9 @@ public class StartOptions : MonoBehaviour
         showPanels.HideEndGamePanel();
         pause.UnPause();
     }
-    public void EndGameScreen()
+    public void EndGameScreen(VehicleData[] data)
     {
+
         Cursor.visible = true;
         pause.DoPause();
 

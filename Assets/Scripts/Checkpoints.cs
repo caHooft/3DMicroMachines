@@ -5,6 +5,7 @@ using UnityEngine;
 public class Checkpoints : MonoBehaviour
 {
     public int MaxPlayers = 2;
+    public CarUI[] UI = new CarUI[2];
     public VehicleData[] Data = new VehicleData[2];
     public Transform[] Waypoints = new Transform[4];
     public int maxLap;
@@ -18,6 +19,7 @@ public class Checkpoints : MonoBehaviour
         {
             Data[i] = new VehicleData();
             Data[i].PlayerNumber = i;
+            Data[i].Rank = i +1;
         }
     }
 
@@ -33,7 +35,6 @@ public class Checkpoints : MonoBehaviour
     //this function requires a playernumber
     private VehicleData GetPlayer(int playernumber)
     {
-
         VehicleData newdata = new VehicleData();
 
         //voor elke data 
@@ -65,12 +66,38 @@ public class Checkpoints : MonoBehaviour
                 data.Waypoint = waypointNumber;
             }
         }
-      
-            
-
-
+        UpdateRank(data);       
 
     }
+
+    private void UpdateRank(VehicleData newData)
+    {        
+        foreach (VehicleData data in Data)
+        {
+            if (newData.Rank == 1) continue;
+            if (data == newData || data.Rank > newData.Rank) continue;
+
+            if (newData.Lap > data.Lap)
+            {
+                newData.Rank = data.Rank;
+                data.Rank++;
+            }
+            else if (newData.Lap == data.Lap)
+            {
+                if (newData.Waypoint > data.Waypoint)
+                {
+                    newData.Rank = data.Rank;
+                    data.Rank++;
+                }
+            }
+        }       
+
+        for (int i =0; i < MaxPlayers; i++)
+        {
+            UI[i].SetData(Data[i]);
+        }
+    }
+
     //this function requires a playernumber
     public void Finish(int playernumber)
     {
@@ -83,16 +110,27 @@ public class Checkpoints : MonoBehaviour
             data.Waypoint = 0;
             data.Lap++;
 
-            if (data.Lap > maxLap)
+            if (data.Lap == maxLap)
             {
+                data.time = Time.timeSinceLevelLoad;
+                data.Finished = true;
+
+                foreach(VehicleData newdata in Data)
+                {
+                    if (!newdata.Finished) return;
+                }
                 FinishedRace();
             }
         }
     }
 
+
     private void FinishedRace()
-    {   
-        //can make what happens if the race is finished here
+    {
+        //can make something happens if the race is finished here
+
+
+        StartOptions.Instance.EndGameScreen(Data);
     }
     //gets the the latest checkpoint of the inserted playernumber
     public Transform GetCheckPoint(int playerNumber)
@@ -100,7 +138,4 @@ public class Checkpoints : MonoBehaviour
 
         return Waypoints[Data[playerNumber].Waypoint];
     }
-
 }
-    
-

@@ -15,11 +15,6 @@ public class CarUI : MonoBehaviour
 
     public int lapCount;
 
-    public void Awake()
-    {
-        //showPanels = GameObject.Find("UIMicroMachines").GetComponent<ShowPanels>();
-        startScript = GameObject.Find("UIMicroMachines").GetComponent<StartOptions>();
-    }
 
     public void Update()
     {
@@ -44,11 +39,11 @@ public class CarUI : MonoBehaviour
         } 
     }
 
-    public void NextLap()
+    public void SetData(VehicleData data)
     {
-        //increases lap count with one
-        lapCount++;
-
+        lapCount = data.Lap;
+        positionText.text = data.Rank.ToString();
+        
         //makes the lap count visibel in the UI
         switch (lapCount)
         {
@@ -77,7 +72,6 @@ public class CarUI : MonoBehaviour
     {
         //sets the text color of timerText to green
         //showPanels.ShowEndGamePanel();
-        startScript.EndGameScreen();
         
         finished = true;
     }
