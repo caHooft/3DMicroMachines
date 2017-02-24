@@ -34,11 +34,11 @@ public class Pause : MonoBehaviour {
 			UnPause ();
             Cursor.visible = false;
         }
-	
-	}
+
+    }
 
 
-	public void DoPause()
+    public void DoPause()
 	{
 		//Set isPaused to true
 		isPaused = true;
