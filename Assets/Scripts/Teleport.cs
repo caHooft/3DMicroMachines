@@ -30,6 +30,7 @@ public class Teleport : MonoBehaviour
             
             Transform respawnPoint = Checkpoints.Instance.GetCheckPoint(1);
             
+
             //GameObject respawnPoint = col.GetComponent<CarMovement>().respawnPoint;
 
             //Destroys the Parent Gameobject that triggers with the collider
@@ -37,7 +38,7 @@ public class Teleport : MonoBehaviour
 
             //Creates a new car at the position of the respawnpoint with the rotation of the respawnpoint.
             
-            Instantiate(car2, respawnPoint.transform.position, respawnPoint.transform.rotation);
+            Instantiate(car2, new Vector3 (respawnPoint.transform.position.x +5, respawnPoint.transform.position.y, respawnPoint.transform.position.z), respawnPoint.transform.rotation);
         }
     }
 
