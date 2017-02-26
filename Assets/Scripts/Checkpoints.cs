@@ -23,6 +23,51 @@ public class Checkpoints : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if(Data[0].Lap == Data[1].Lap)
+        {
+            if(Data[0].Waypoint == Data[1].Waypoint)
+            {
+                float distPlayer1 = Vector3.Distance(GetCheckPoint(0).position, GameObject.FindGameObjectWithTag("Player").transform.position);
+                float distPlayer2 = Vector3.Distance(GetCheckPoint(1).position, GameObject.FindGameObjectWithTag("Player2").transform.position);
+
+                VehicleData dataP1 = GetPlayer(0);
+                VehicleData dataP2 = GetPlayer(1);
+
+                if (distPlayer2 > distPlayer1)
+                {
+                    foreach (VehicleData data in Data)
+                    {
+                        if (dataP1.Rank == 2) continue;
+                        if (data == dataP1) continue;
+
+                            dataP1.Rank = data.Rank;
+                            data.Rank--;
+                    }
+                    Debug.Log("player 2 should be first");
+                }
+                else if(distPlayer1 > distPlayer2)
+                {
+                    foreach (VehicleData data in Data)
+                    {
+                        if (dataP2.Rank == 2) continue;
+                        if (data == dataP2) continue;
+
+                        dataP2.Rank = data.Rank;
+                        data.Rank--;
+                    }
+                    Debug.Log("player 1 should be first");
+                }
+
+                for (int i = 0; i < MaxPlayers; i++)
+                {
+                    UI[i].SetData(Data[i]);
+                }
+            }
+        }
+    }
+
     //checks if the static instance is set. If not it sets it
     public static Checkpoints Instance
     {
