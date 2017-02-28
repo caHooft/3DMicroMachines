@@ -25,16 +25,22 @@ public class Checkpoints : MonoBehaviour
 
     public void Update()
     {
+        if (Data.Length <= 1) return;   
+        //if both players are on the same lap
         if(Data[0].Lap == Data[1].Lap)
         {
+            //if both players have the same last passed waypoint
             if(Data[0].Waypoint == Data[1].Waypoint)
             {
+                //check distance between the last passed checkpoint and the player
                 float distPlayer1 = Vector3.Distance(GetCheckPoint(0).position, GameObject.FindGameObjectWithTag("Player").transform.position);
                 float distPlayer2 = Vector3.Distance(GetCheckPoint(1).position, GameObject.FindGameObjectWithTag("Player2").transform.position);
 
+                //get current player data and store it in a variable
                 VehicleData dataP1 = GetPlayer(0);
                 VehicleData dataP2 = GetPlayer(1);
 
+                //if dist between the last passed waypoint and player 2 is bigger than the last passed waypoint and player1. Set player 2 as first ranked
                 if (distPlayer2 > distPlayer1)
                 {
                     foreach (VehicleData data in Data)
@@ -44,10 +50,12 @@ public class Checkpoints : MonoBehaviour
 
                             dataP1.Rank = data.Rank;
                             data.Rank--;
+                        Debug.Log("player 1 ftw");
                     }
-                    Debug.Log("player 2 should be first");
+                    
                 }
-                else if(distPlayer1 > distPlayer2)
+                //if dist between the last passed waypoint and player 1 is bigger than the last passed waypoint and player2. Set player 1 as first ranked
+                else if (distPlayer1 > distPlayer2)
                 {
                     foreach (VehicleData data in Data)
                     {
@@ -56,10 +64,11 @@ public class Checkpoints : MonoBehaviour
 
                         dataP2.Rank = data.Rank;
                         data.Rank--;
+                        Debug.Log("player 2 ftw");
                     }
-                    Debug.Log("player 1 should be first");
+                    
                 }
-
+                //update the Ui so the player can see which player is first
                 for (int i = 0; i < MaxPlayers; i++)
                 {
                     UI[i].SetData(Data[i]);

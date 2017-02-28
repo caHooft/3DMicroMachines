@@ -104,7 +104,6 @@ public class CarMovement : MonoBehaviour
         }
 
         //Log the brakeTorque of the frontLeftWheel 
-        Debug.Log(frontLeftWheel.brakeTorque);
        
    }
       
@@ -124,12 +123,7 @@ public class CarMovement : MonoBehaviour
     //this function sets the frontLeftWheel and the frontRightWheel brakeTorque to zero, this way the player can continue his way after braking
     public void NoHandbrake()
     {
-
         frontLeftWheel.brakeTorque = 0;
         frontRightWheel.brakeTorque = 0;
-
-        Debug.Log("Brake Off");
-
     }
-
 }

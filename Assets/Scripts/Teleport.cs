@@ -38,7 +38,7 @@ public class Teleport : MonoBehaviour
 
             //Creates a new car at the position of the respawnpoint with the rotation of the respawnpoint.
             
-            Instantiate(car2, new Vector3 (respawnPoint.transform.position.x +5, respawnPoint.transform.position.y, respawnPoint.transform.position.z), respawnPoint.transform.rotation);
+            Instantiate(car2, new Vector3 (respawnPoint.transform.position.x +7, respawnPoint.transform.position.y, respawnPoint.transform.position.z), respawnPoint.transform.rotation);
         }
     }
 
